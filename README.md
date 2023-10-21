@@ -61,6 +61,8 @@ Now compare `LoginInteractor` and `SignupInteractor` side by side. (You can drag
 tabs around if you like.)
 
 **Thought question:** Why doesn't the `LoginInteractor` have a `UserFactory`?
+*answer*: because the user already exist when they try to login, no need to 
+create another!
 
 #### Remnants of a bug
 
