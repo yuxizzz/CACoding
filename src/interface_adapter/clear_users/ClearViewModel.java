@@ -1,9 +1,6 @@
 package interface_adapter.clear_users;
 
-// TODO Complete me
-
 import interface_adapter.ViewModel;
-import interface_adapter.signup.SignupState;
 
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;

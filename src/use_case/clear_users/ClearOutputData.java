@@ -1,26 +1,21 @@
 package use_case.clear_users;
 
-// TODO Complete me
-
 import java.util.ArrayList;
 
 public class ClearOutputData {
-    private final String message;
     private boolean useCaseFailed;
-    private ArrayList<String> userDeleted;
+    private String userDeleted;
 
-    public ClearOutputData(String message, ArrayList<String> userDeleted, boolean useCaseFailed) {
-        this.message = message;
+    public ClearOutputData(ArrayList<String> userDeleted, boolean useCaseFailed) {
         this.useCaseFailed = useCaseFailed;
-        this.userDeleted = userDeleted;
+        this.userDeleted = "";
+        for (String s: userDeleted) {
+            this.userDeleted += s + "\n";
+        }
 
     }
 
-    public String getMessage() {
-        return message;
-    }
-
-    public ArrayList<String> getUserDeleted() {
+    public String getUserDeleted() {
         return userDeleted;
     }
 }

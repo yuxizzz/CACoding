@@ -1,13 +1,9 @@
 package interface_adapter.clear_users;
 
-// TODO Complete me
-
-import java.util.ArrayList;
-
 public class ClearState {
     private String message = "";
     private String messageError = null;
-    private ArrayList<String> users = null;
+    private String users = null;
 
     public ClearState() {
     }
@@ -16,11 +12,11 @@ public class ClearState {
         this.message = message;
     }
 
-    public void setUserDeleted(ArrayList<String> userDeleted) {
+    public void setUserDeleted(String userDeleted) {
         this.users = userDeleted;
     }
 
-    public ArrayList<String> getUserDeleted() {
+    public String getUserDeleted() {
         return this.users;
     }
 

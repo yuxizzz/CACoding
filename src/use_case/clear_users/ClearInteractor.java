@@ -1,9 +1,6 @@
 package use_case.clear_users;
 
-// TODO Complete me
-
 import java.util.ArrayList;
-import java.util.Set;
 
 public class ClearInteractor implements ClearInputBoundary {
     final ClearUserDataAccessInterface userDataAccessObject;
@@ -18,11 +15,8 @@ public class ClearInteractor implements ClearInputBoundary {
     public void execute(ClearInputData clearInputData) {
 
         ArrayList<String> deletedUsers = userDataAccessObject.clearAllUser();
-        String message = "Cleared all users.";
-        ClearOutputData clearOutputData = new ClearOutputData(message, deletedUsers, false);
+        ClearOutputData clearOutputData = new ClearOutputData(deletedUsers, false);
         userPresenter.prepareSuccessView(clearOutputData);
-
-        //ask dataAccessinterface for info on my users?/call it to delete all users?
 
     }
 }
